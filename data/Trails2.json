@@ -1,0 +1,113 @@
+{"type" : "FeatureCollection",
+  "features" : [
+    {"type" : "Feature",
+      "properties" : {
+        "ID" : 544,
+        "Name" : "Elkhorn Trail",
+        "Type" : "Bikeway",
+        "Class" : 3,
+        "Dedicated" : "unknown",
+        "SurfaceType" : "unknown",
+        "TreadWidth" : "unknown",
+        "EaseWidthFt" : "unknown",
+        "ElevFt" : "unknown",
+        "DistFt" : 183.57870129792471,
+        "DistMi" : 0.034768693427637255,
+        "Difficulty" : "unknown",
+        "DogPolicy" : "unknown",
+        "HorsePolicy" : "unknown",
+        "ADAAccess" : "unknown",
+        "Source" : 1,
+        "Accuracy" : 3,
+        "Visible" : 1,
+        "Status" : "Existing",
+        "Jurisdiction" : "City of Palm Desert"
+      },
+      "geometry" : {"type" : "LineString", "coordinates"  : [
+            [
+              -116.31554861399997,
+              33.72948339800007
+            ],
+            [
+              -116.31553891899995,
+              33.728985984000076
+            ]
+		]
+		}
+	},
+    {"type" : "Feature",
+      "properties" : {
+        "ID" : 571,
+        "Name" : "Jackson St",
+        "Type" : "Bikeway",
+        "Class" : 2,
+        "Dedicated" : "unknown",
+        "SurfaceType" : "unknown",
+        "TreadWidth" : "unknown",
+        "EaseWidthFt" : "unknown",
+        "ElevFt" : "unknown",
+        "DistFt" : 934.41919280906143,
+        "DistMi" : 0.17697333197141316,
+        "Difficulty" : "unknown",
+        "DogPolicy" : "unknown",
+        "HorsePolicy" : "unknown",
+        "ADAAccess" : "unknown",
+        "Source" : 1,
+        "Accuracy" : 3,
+        "Visible" : 1,
+        "Status" : "Proposed",
+        "Jurisdiction" : "City of Indio"
+      },
+      "geometry" : {"type" : "LineString", "coordinates"  : [
+            [
+              -116.21620352499997,
+              33.717476301000033
+            ],
+            [
+              -116.21620632399998,
+              33.715539701000068
+            ],
+            [
+              -116.21624885399996,
+              33.714909524000063
+            ]
+		]
+		}
+	},
+    {"type" : "Feature",
+      "properties" : {
+        "ID" : 7,
+        "Name" : "Fred Waring Dr",
+        "Type" : "Bikeway",
+        "Class" : 2,
+        "Dedicated" : "unknown",
+        "SurfaceType" : "unknown",
+        "TreadWidth" : "unknown",
+        "EaseWidthFt" : "unknown",
+        "ElevFt" : "unknown",
+        "DistFt" : 2651.2666384345021,
+        "DistMi" : 0.50213383303683756,
+        "Difficulty" : "unknown",
+        "DogPolicy" : "unknown",
+        "HorsePolicy" : "unknown",
+        "ADAAccess" : "unknown",
+        "Source" : 1,
+        "Accuracy" : 3,
+        "Visible" : 1,
+        "Status" : "Proposed",
+        "Jurisdiction" : "City of Indio"
+      },
+      "geometry" : {"type" : "LineString", "coordinates"  : [
+            [
+              -116.26883864299998,
+              33.729234595000037
+            ],
+            [
+              -116.26687873799995,
+              33.729257598000061
+            ]
+		]
+		}
+	}
+]
+}

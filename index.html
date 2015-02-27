@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Load Leaflet from CDN-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/1.0.0-rc.3/esri-leaflet.js"></script>
+
+    <!-- Load local Javascripts -->
+    <script src="data/bikeAmenities.js"></script>
+    <script src="data/bikeParking.js"></script>
+    <script src="data/trailHeads.js"></script>
+    <script src="data/transitBikeParking.js"></script>
+    <script src="data/trails.js"></script>
+    <script src="scripts/CVTrails.js"></script>
+
+    <!-- Load local stylesheets -->
+    <link href="css/CVTrails.css" rel="stylesheet">
+    
+    <title>CV Trails & Amenities</title>
+  </head>
+
+  <body>
+    <header>
+      <table>
+        <tr>
+          <td style="width:300px"><h2>Coachella Valley<br>
+             hiking, biking, and equestrian trails and amenities</h2></td>
+          <td id="headerImage"><img src="images\CVTrails_logo.jpg" alt="Header Image"></td>
+        </tr>
+        <tr>
+          <nav class="navButtons">
+            <ul>
+              <li><button><img src="images\search.png" alt="search"></button></li>
+              <li><button><img src="images\print.png" alt="print"></button></li>
+            </ul>
+            <ul>
+              <li><button><img src="images\legend.png" alt="legend"></button></li>
+              <li><button><img src="images\layers.png" alt="layers"></button></li>
+            </ul>
+            <ul>
+              <li><button type="button" id="popup" alt="Contact Me" on-click="div_show()"><img src="images\mail.png"></button></li>
+              <li><button><img src="images\about.png" alt="About"></button></li>
+            </ul>
+          </nav>    
+        </tr>
+      </table>
+    </header>
+
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([33.8000629, -116.4104], 12);
+
+      // L.esri.basemapLayer("Gray").addTo(map);
+      // add an OpenStreetMap tile layer
+    		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    		}).addTo(map);
+
+        var bASymbol1 = {
+          radius: 8,
+          fillColor: "#ff7800",
+          color: "#000",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        };
+
+        var bASymbol2 = {
+          radius: 8,
+          fillColor: "#3F3",
+          color: "#000",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        };
+
+        var bAExist = L.icon({
+          iconUrl: "images/biking-blackblue.png",
+          iconSize: [39,38] // size of the icon
+         });
+
+        var bAProposed = L.icon({
+          iconUrl: "images/biking-blackorange.png",
+          iconSize: [39,38] // size of the icon
+         });
+
+        L.geoJson(bikeAmenities, {
+         pointToLayer: function (feature, latlng) {
+            switch (feature.properties.Status) {
+              case 'Existing' : return L.marker(latlng, {icon: bAExist}).bindPopup('<b>' + '<font size="2">' + "Bike Amenities" + '</font>' + '</b>' + '<br/>' + "Location: " + feature.properties.Location + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+              case 'Proposed' : return L.marker(latlng, {icon: bAProposed}).bindPopup('<b>' + '<font size="2">' + "Bike Amenities" + '</font>' + '</b>' + '<br/>' + "Location: " + feature.properties.Location + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+            }
+          }
+        }).addTo(map);
+
+        var bPExist = L.icon({
+          iconUrl: "images/biking-redblue.png",
+          iconSize: [39,38] // size of the icon
+         });
+
+        var bPProposed = L.icon({
+          iconUrl: "images/biking-redorange.png",
+          iconSize: [39,38] // size of the icon
+         });
+
+        L.geoJson(bikeParking, {
+            pointToLayer: function(feature, latlng) {
+              switch (feature.properties.Status) {
+                case 'Existing': return L.marker(latlng, {icon: bPExist}).bindPopup('<b>' + '<font size="2">' + "Bike Parking" + '</font>' + '</b>' + '<br/>' + "Location: " + feature.properties.Location + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+                case 'Proposed': return L.marker(latlng, {icon: bPProposed}).bindPopup('<b>' + '<font size="2">' + "Bike Parking" + '</font>' + '</b>' + '<br/>' + "Location: " + feature.properties.Location + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+              }
+            }
+          }).addTo(map);
+
+        var tHExist = L.icon({
+          iconUrl: "images/trailhead_e.png",
+          iconSize: [27,27]
+        });
+
+        var tHProposed = L.icon({
+          iconUrl: "images/trailhead_p.png",
+          iconSize: [27,27]
+        });
+
+        L.geoJson(trailHeads, {
+            pointToLayer: function(feature, latlng) {
+              switch (feature.properties.Status) {
+                case 'Existing': return L.marker(latlng, {icon: tHExist}).bindPopup('<b>' + '<font size="2">' + "Trail Head" + '</font>' + '</b>' + '<br/>' + "Name: " + feature.properties.Name + '<br/>' + "Status: " + feature.properties.Status);
+                case 'Proposed': return L.marker(latlng, {icon: tHProposed}).bindPopup('<b>' + '<font size="2">' + "Trail Head" + '</font>' + '</b>' + '<br/>' + "Name: " + feature.properties.Name + '<br/>' + "Status: " + feature.properties.Status);
+              }
+            }
+          }).addTo(map);
+
+        var tBPExist = L.icon({
+          iconUrl: "images/transit_bike_e2.png",
+          iconSize: [33,37]
+        });
+
+        var tBPProposed = L.icon({
+          iconUrl: "images/transit_bike_p2.png",
+          iconSize: [34,37]
+        });
+
+        L.geoJson(transitBikeParking, {
+            pointToLayer: function(feature, latlng) {
+              switch (feature.properties.Status) {
+                case 'Existing': return L.marker(latlng, {icon: tBPExist}).bindPopup('<b>' + '<font size="2">' + "Transit Bus Parking" + '</font>' + '</b>' + '<br/>' + "Bus No: " + feature.properties.BusStopNum + '<br/>' + "Line: " + feature.properties.Lines + '<br/>' + "On Street: " + feature.properties.OnStreet + '<br/>' + "Cross Street: " + feature.properties.CrossStreet + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+                case 'Proposed': return L.marker(latlng, {icon: tBPProposed}).bindPopup('<b>' + '<font size="2">' + "Transit Bus Parking" + '</font>' + '</b>' + '<br/>' + "Bus No: " + feature.properties.BusStopNum + '<br/>' + "Line: " + feature.properties.Lines + '<br/>' + "On Street: " + feature.properties.OnStreet + '<br/>' + "Cross Street: " + feature.properties.CrossStreet + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+              }
+            }
+          }).addTo(map);
+
+
+        var tESymbol1 = {
+          color: "#B40404",
+          weight: 2,
+          opacity: 1,
+          lineCap: "butt",
+          lineJoin: "round"
+        };
+
+        var tPSymbol1 = {
+          color: "#08088A",
+          weight: 2,
+          opacity: 1,
+          lineCap: "butt",
+          lineJoin: "round"
+        };
+
+        var tESymbol2 = {
+          color: "#B40404",
+          weight: 2,
+          opacity: 1,
+          dashArray: "5, 2",
+          lineCap: "butt",
+          lineJoin: "round"
+        };
+
+        var tPSymbol2 = {
+          color: "#08088A",
+          weight: 2,
+          opacity: 1,
+          dashArray: "5, 2",
+          lineCap: "butt",
+          lineJoin: "round"
+        };
+
+/*
+        L.geoJson(trails, {
+          lineToLayer: function(feature, latlngs) {
+              switch (feature.properties.Status) {
+                case 'Existing': return L.polyline(latlngs, {tESymbol1}).bindPopup('<b>' + '<font size="2">' + "Trails" + '</font>' + '</b>' + '<br/>' + "Name: " + feature.properties.Name + '<br/>' + "Type: " + feature.properties.Type + '<br/>' + "Distance Miles: " + feature.properties.DistMi + '<br/>' + "Class: " + feature.properties.Class + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+                case 'Proposed': return L.polyline(latlngs, {tPSymbol1}).bindPopup('<b>' + '<font size="2">' + "Trails" + '</font>' + '</b>' + '<br/>' + "Name: " + feature.properties.Name + '<br/>' + "Type: " + feature.properties.Type + '<br/>' + "Distance Miles: " + feature.properties.DistMi + '<br/>' + "Class: " + feature.properties.Class + '<br/>' + "Jurisdiction: " + feature.properties.Jurisdiction + '<br/>' + "Status: " + feature.properties.Status);
+              }
+            }
+          }).addTo(map);
+*/
+    </script>
+	<div id="contactMeFm">
+		<!-- Popup Div Starts Here -->
+		<div id="popupContact">
+		<!-- Contact Us Form -->
+		<form action="#" id="contactForm" method="post" name="form">
+			<img id="close" src="images/3.png" onclick ="div_hide()">
+			<h2>Contact Us</h2>
+			<hr>
+			<input id="name" name="name" placeholder="Name" type="text">
+			<input id="email" name="email" placeholder="Email" type="text">
+			<textarea id="msg" name="message" placeholder="Message">
+			</textarea>
+			<a href="javascript:%20check_empty()" id="submit">Send</a>
+		</form>
+		</div>
+		<!-- Popup Div Ends Here -->
+	</div>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Sheila/Desktop/CVTrails",
+		"/C/Users/Sheila/Desktop/CVTrails/css",
+		"/C/Users/Sheila/Desktop/CVTrails/data"
+	],
+	"file_history":
+	[
+		"/C/Users/Sheila/Desktop/CVTrails/css/CVTrails.css",
+		"/C/Users/Sheila/Desktop/CVTrails/index.html",
+		"/C/Users/Sheila/Desktop/CVTrails/data/Trails.json",
+		"/C/Users/Sheila/Desktop/CVTrails/scripts/CVTrails.js",
+		"/C/CV_Data/Trails.json",
+		"/C/CV_Data/Trails1.json",
+		"/C/CV_Data/Trails_WGS84_FeaturesToJSON.json",
+		"/C/Users/Sheila/Desktop/CVTrails/index_Copy.html",
+		"/C/Users/Sheila/Desktop/CVTrails/popupform.html",
+		"/C/Users/Sheila/Desktop/CVTrails/css/elements.css",
+		"/C/Users/Sheila/Desktop/CVTrails/contact1.html",
+		"/C/Users/Sheila/Desktop/CVTrails/contact.html",
+		"/C/Users/Sheila/Documents/HTML5/Section 2/Lecture 13/Project Files/blue web developer - done/css/style.css",
+		"/C/Users/Sheila/Desktop/CVTrails/data/bikeParking.js",
+		"/C/Users/Sheila/Desktop/CVTrails/css/MarkerCluster.css",
+		"/C/CVTrails/marker-clustering-geojson.html",
+		"/C/Users/Sheila/Desktop/CVTrails/layerPopup.js",
+		"/C/Users/Sheila/Desktop/CVTrails/data/TrailHeads.json",
+		"/C/Users/Sheila/Desktop/firstSite/index.html",
+		"/C/Users/Sheila/Desktop/CVTrails/data/BikeAmenities.json",
+		"/C/Users/Sheila/Desktop/firstSite/css/custom.css",
+		"/C/Users/Sheila/Desktop/CVTrails/CVTrails.html",
+		"/C/Users/Sheila/Documents/HTML5/Section 5/Geolocation/Program Files/blue_developer_done/leaflet-esri.html",
+		"/C/Users/Sheila/Documents/HTML5/Section 5/Geolocation/Program Files/blue_developer_done/Util.js",
+		"/C/Users/Sheila/Documents/HTML5/Section 5/Geolocation/Program Files/blue_developer_done/markerPopup.js",
+		"/C/Users/Sheila/Documents/HTML5/Section 5/Geolocation/Program Files/blue_developer_done/layerPopup.js",
+		"/C/CV_Data/TrailHeads.json",
+		"/C/CV_Data/TransitBikeParking.json",
+		"/C/CV_Data/BikeParking.json",
+		"/C/CV_Data/TransitBikeParking2.json",
+		"/C/Users/Sheila/Documents/HTML5/Section 5/Geolocation/Program Files/blue_developer_done/register_leaflet.html",
+		"/C/Users/Sheila/Desktop/firstSite/css/bootstrap.css",
+		"/C/Users/Sheila/Desktop/firstSite/css/jumbotron.css"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"Hiking\",",
+			"\"Bike/Golf\",",
+			"\"Golf\",",
+			"\"Multipurpose\",",
+			"\"Sidewalk\",",
+			"\"Equestrian\",",
+			"\"Golf\",",
+			"\"Bikeway\",",
+			"\"Hiking/Equestrian\",",
+			"\"Hiking\",",
+			"\"geometry\" : {\n        \"paths\" :",
+			"{\n      \"attributes\"",
+			"\"attributes\"",
+			"Shape",
+			"\"Shape_Length\" :*}",
+			"Shape",
+			"Type1",
+			"        \"Type\" : 6,\n",
+			"        \"Type\" : 5,\n",
+			"        \"Type\" : 4,\n",
+			"        \"Type\" : 3,\n",
+			"        \"Type\" : 1,\n",
+			"\"Type\" : 2,\n",
+			"\"Type\" : 2,",
+			"Status1",
+			"OBJECTID",
+			"popup",
+			"OBJECTID",
+			"\"y\" : ",
+			"\"x\" : ",
+			"\"geometry\" : {",
+			"NAME",
+			"Status1",
+			"attributes",
+			"OBJECTID",
+			"\"geometry\" : \"type\" : \"Point\", \"coordinates\" :{",
+			"\"geometry\" : ",
+			"\"y\" : ",
+			"\"x\" : ",
+			"DIRECTION",
+			"LOCATION",
+			"POSITION_",
+			"CROSSSTREET",
+			"ONSTREET",
+			"LINES",
+			"BUSSTOPNUM",
+			"STORAGETYPE",
+			"Status1",
+			"OBJECTID",
+			"attributes"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"Multipurpose\"",
+			"\"Sidewalk\"",
+			"\"Equestrian\"",
+			"\"Golf\"",
+			"\"Bikeway\"",
+			"\"Hiking/Equestrian\"",
+			"\"Hiking\"",
+			"\"geometry\" : {\"type\" : \"Polyline\", \"coordinates\" :",
+			"{\"type\" : \"Feature\",\n      \"properties\"",
+			"\"type\" : \"Feature\",\n      \"properties\"",
+			"Type",
+			"",
+			"Status",
+			"ID",
+			"",
+			"[",
+			"\"geometry\" : {\"type\" : \"Point\", \"coordinates\" :",
+			"Name",
+			"Status",
+			"properties",
+			"ID",
+			"\"geometry\" : {\"type\" : \"Point\", \"coordinates\" :",
+			"\"geometry\" : \"type\" : \"Point\", \"coordinates\" :",
+			"",
+			"[",
+			"Direction",
+			"Location",
+			"Position",
+			"Cross Street",
+			"On Street",
+			"Lines",
+			"Bus Stop Num",
+			"Storage Type",
+			"Status",
+			"ID",
+			"properties"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.713877464937,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
